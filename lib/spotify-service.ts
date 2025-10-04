@@ -141,6 +141,6 @@ export const getFallbackSong = (): MysticalSong => {
     color: getMoodColor(randomSong.mood),
     duration: "3:45",
     spotifyTrack: null,
-    audioUrl: "https://archive.org/download/testmp3testfile/mpthreetest.mp3"
+    audioUrl: "" // YouTube will handle audio
   };
 };

@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { EnhancedAudioPlayer } from '@/components/enhanced-audio-player';
-import { SpotifyAuth } from '@/components/spotify-auth';
-import { getRandomMysticalSong, getFallbackSong, MysticalSong } from '@/lib/spotify-service';
+import { YouTubeAudioPlayer } from '@/components/youtube-audio-player';
+import { getFallbackSong, MysticalSong } from '@/lib/spotify-service';
 
 const mysticalMessages = [
   "The universe has chosen your soundtrack for today...",
@@ -22,7 +21,6 @@ export default function SoulPlaylist() {
   const [isRevealing, setIsRevealing] = useState(false);
   const [message, setMessage] = useState('');
   const [showAnimation, setShowAnimation] = useState(false);
-  const [isSpotifyConnected, setIsSpotifyConnected] = useState(false);
   const [isLoadingSong, setIsLoadingSong] = useState(false);
 
   const revealSong = async () => {
@@ -35,20 +33,10 @@ export default function SoulPlaylist() {
     setMessage(randomMessage);
     
     // Delay the song reveal for dramatic effect
-    setTimeout(async () => {
+    setTimeout(() => {
       try {
-        let song: MysticalSong | null = null;
-        
-        if (isSpotifyConnected) {
-          // Try to get a real Spotify track
-          song = await getRandomMysticalSong();
-        }
-        
-        // Fallback to demo song if Spotify fails or not connected
-        if (!song) {
-          song = getFallbackSong();
-        }
-        
+        // Always use mystical demo songs
+        const song = getFallbackSong();
         setCurrentSong(song);
       } catch (error) {
         console.error('Error getting song:', error);
@@ -66,9 +54,6 @@ export default function SoulPlaylist() {
     setShowAnimation(false);
   };
 
-  const handleSpotifyAuth = (token: string) => {
-    setIsSpotifyConnected(true);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">
@@ -97,10 +82,6 @@ export default function SoulPlaylist() {
           </p>
         </div>
 
-        {/* Spotify Auth */}
-        <div className="mb-6">
-          <SpotifyAuth onAuthSuccess={handleSpotifyAuth} />
-        </div>
 
         {/* Main Card */}
         <div className="bg-gradient-to-br from-purple-800/30 to-blue-800/30 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20 shadow-2xl">
@@ -121,10 +102,7 @@ export default function SoulPlaylist() {
                   Ready for Your Prediction?
                 </h2>
                 <p className="text-blue-200 mb-6">
-                  {isSpotifyConnected 
-                    ? "Let Spotify's mystical forces choose your day's soundtrack"
-                    : "Let the mystical forces choose your day's soundtrack"
-                  }
+                  Let the mystical forces choose your day's soundtrack
                 </p>
               </div>
               
@@ -133,7 +111,7 @@ export default function SoulPlaylist() {
                 disabled={isRevealing}
                 className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 disabled:opacity-50 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                {isRevealing ? (isLoadingSong ? 'Searching Spotify...' : 'Channeling Energy...') : 'Reveal My Song'}
+                {isRevealing ? 'Channeling Energy...' : 'Reveal My Song'}
               </button>
             </div>
           ) : (
@@ -159,9 +137,9 @@ export default function SoulPlaylist() {
                 </div>
               </div>
 
-              {/* Audio Player */}
+              {/* YouTube Audio Player */}
               <div className="mb-6">
-                <EnhancedAudioPlayer song={currentSong} />
+                <YouTubeAudioPlayer song={currentSong} />
               </div>
 
               {/* Action Buttons */}
