@@ -3,13 +3,13 @@
 // Top songs from all time organized by mystical moods
 export const mysticalPlaylists = {
   "Energizing": [
-    { title: "Don't Stop Me Now", artist: "Queen", videoId: "HgzGwKwLmgM" },
+    { title: "Don&apos;t Stop Me Now", artist: "Queen", videoId: "HgzGwKwLmgM" },
     { title: "Eye of the Tiger", artist: "Survivor", videoId: "btPJPFnesV4" },
     { title: "We Will Rock You", artist: "Queen", videoId: "rY0WxgSXdEE" },
     { title: "Thunderstruck", artist: "AC/DC", videoId: "v2AC41dglnM" },
     { title: "Born to Run", artist: "Bruce Springsteen", videoId: "IxuThNgl3YA" },
     { title: "Jump", artist: "Van Halen", videoId: "SwYN7mTi6HM" },
-    { title: "Livin' on a Prayer", artist: "Bon Jovi", videoId: "lDK9QqIzhwk" },
+    { title: "Livin&apos; on a Prayer", artist: "Bon Jovi", videoId: "lDK9QqIzhwk" },
     { title: "We Are the Champions", artist: "Queen", videoId: "04854XqcfCY" }
   ],
   
@@ -27,11 +27,11 @@ export const mysticalPlaylists = {
   "Hopeful": [
     { title: "Here Comes the Sun", artist: "The Beatles", videoId: "KQetemT1W2c" },
     { title: "I Will Survive", artist: "Gloria Gaynor", videoId: "ZBR2G-iI3-I" },
-    { title: "Don't Stop Believin'", artist: "Journey", videoId: "VcjzHMhBtf0" },
-    { title: "What's Going On", artist: "Marvin Gaye", videoId: "H-kA3UtBj4M" },
+    { title: "Don&apos;t Stop Believin&apos;", artist: "Journey", videoId: "VcjzHMhBtf0" },
+    { title: "What&apos;s Going On", artist: "Marvin Gaye", videoId: "H-kA3UtBj4M" },
     { title: "Three Little Birds", artist: "Bob Marley", videoId: "zaGUr6wzyT8" },
     { title: "I Can See Clearly Now", artist: "Johnny Nash", videoId: "J9NQFACZYE4" },
-    { title: "You've Got a Friend", artist: "Carole King", videoId: "xEkIou3WFnM" },
+    { title: "You&apos;ve Got a Friend", artist: "Carole King", videoId: "xEkIou3WFnM" },
     { title: "The Climb", artist: "Miley Cyrus", videoId: "NG2zyeVRcbs" }
   ],
   
@@ -40,14 +40,14 @@ export const mysticalPlaylists = {
     { title: "Hotel California", artist: "Eagles", videoId: "BciS5krYL80" },
     { title: "Bohemian Rhapsody", artist: "Queen", videoId: "fJ9rUzIMcZQ" },
     { title: "Stairway to Heaven", artist: "Led Zeppelin", videoId: "QkF3oxziUI4" },
-    { title: "Sweet Child O' Mine", artist: "Guns N' Roses", videoId: "1w7OgIMMRc4" },
+    { title: "Sweet Child O&apos; Mine", artist: "Guns N&apos; Roses", videoId: "1w7OgIMMRc4" },
     { title: "Wonderwall", artist: "Oasis", videoId: "6hzrDeceEKc" },
     { title: "Smells Like Teen Spirit", artist: "Nirvana", videoId: "hTWKbfoikeg" },
     { title: "Creep", artist: "Radiohead", videoId: "XFkzRNyygfk" }
   ],
   
   "Contemplative": [
-    { title: "The Times They Are A-Changin'", artist: "Bob Dylan", videoId: "e7qQ6_RV4VQ" },
+    { title: "The Times They Are A-Changin&apos;", artist: "Bob Dylan", videoId: "e7qQ6_RV4VQ" },
     { title: "Mad World", artist: "Tears for Fears", videoId: "u1ZvPSpLxCg" },
     { title: "Everybody Hurts", artist: "R.E.M.", videoId: "5rOiW_xY-kc" },
     { title: "Black", artist: "Pearl Jam", videoId: "4qlCC1GOwFw" },
@@ -72,7 +72,7 @@ export const mysticalPlaylists = {
     { title: "I Will Always Love You", artist: "Whitney Houston", videoId: "3JWTaaS7LdU" },
     { title: "Purple Rain", artist: "Prince", videoId: "TvnYmWpD_T8" },
     { title: "Total Eclipse of the Heart", artist: "Bonnie Tyler", videoId: "lcOxhH8N3Bo" },
-    { title: "Nothing Compares 2 U", artist: "Sinead O'Connor", videoId: "iUiTQvT0W_0" },
+    { title: "Nothing Compares 2 U", artist: "Sinead O&apos;Connor", videoId: "iUiTQvT0W_0" },
     { title: "The Power of Love", artist: "Celine Dion", videoId: "J_8xCp1IKyk" },
     { title: "Unchained Melody", artist: "The Righteous Brothers", videoId: "qiiyq2xrSI0" },
     { title: "My Heart Will Go On", artist: "Celine Dion", videoId: "3gK_2XdjOdY" },
