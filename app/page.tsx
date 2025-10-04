@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { YouTubeAudioPlayer } from '@/components/youtube-audio-player';
 import { getFallbackSong, MysticalSong } from '@/lib/spotify-service';
@@ -102,7 +102,7 @@ export default function SoulPlaylist() {
                   Ready for Your Prediction?
                 </h2>
                 <p className="text-blue-200 mb-6">
-                  Let the mystical forces choose your day's soundtrack
+                  Let the mystical forces choose your day&apos;s soundtrack
                 </p>
               </div>
               
